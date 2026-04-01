@@ -5,7 +5,7 @@ Databricks Delta Lake (Bronze/Silver/Gold medallion architecture), and Tableau P
 
 ## Project narrative
 The 2026 Iran conflict pushed Brent crude up ~50% from January to March 2026
-as Strait of Hormuz shipments fell. This project tracks 50 years of EIA weekly
+as Strait of Hormuz shipments fell. This project tracks 50 years of EIA (US Energy Information Administration) weekly
 petroleum data to put that spike in full historical context — alongside the 1991
 Gulf War, 2008 financial crisis, and 2020 COVID collapse.
 
