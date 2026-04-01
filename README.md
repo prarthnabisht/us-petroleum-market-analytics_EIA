@@ -18,7 +18,7 @@ PySpark | Delta Lake (Bronze/Silver/Gold) | Databricks Community Edition | Table
 03_gold_kpis     — KPI aggregates, era averages, CSV export for Tableau
 
 ## Dashboard
-Live Tableau Public dashboard: [ADD YOUR TABLEAU PUBLIC LINK HERE]
+Live Tableau Public dashboard: 
 
 ## How to run
 1. Get a free EIA API key: https://www.eia.gov/opendata/register.php
