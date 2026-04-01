@@ -26,4 +26,3 @@ Live Tableau Public dashboard: [ADD YOUR TABLEAU PUBLIC LINK HERE]
 3. Clone this repo into Databricks Repos
 4. Run notebooks in order: 01 -> 02 -> 03
 5. Download gold CSVs and connect to Tableau Public
-<img width="468" height="337" alt="image" src="https://github.com/user-attachments/assets/69f5da6b-1bb1-4b26-bfdd-84aada7a8f11" />
