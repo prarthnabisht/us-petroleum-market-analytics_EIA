@@ -206,7 +206,7 @@ petroleum-analytics-portfolio/
 │   ├── Bronze_Ingest.py    # EIA API → Bronze Delta tables
 │   ├── Silver_Clean.py     # Clean, join, era labels → Silver Delta table
 │   ├── Gold_KPIs.py        # KPI aggregation → Gold tables + Volume CSV export
-|   └── SchedulerJobYAMLConfig.yml # YAML file having config details of the job created using Databricks Job UI. The code is                                        exported using databricks functionality
+|   └── SchedulerJobYAMLConfig.yml # YAML file having config details of the job created using Databricks Job UI. The code is exported using databricks functionality
 └── README.md
 ```
 
