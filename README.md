@@ -62,9 +62,9 @@ EIA API
 
 | Notebook | Layer | Description |
 |---|---|---|
-| `01_bronze_ingest` | Bronze | Fetch 7 EIA series via `/v2/seriesid/` API with pagination. Full history, no date filter. |
-| `02_silver_clean` | Silver | Cast types, join all series, add era labels, conflict flag, rolling calculations (WoW, 4wk avg). |
-| `03_gold_kpis` | Gold | Aggregate KPIs, era averages, export CSVs to Unity Catalog Volume `/Volumes/petroleum_gold/exports/csv_exports/`. |
+| `Bronze_Ingest` | Bronze | Fetch 7 EIA series via `/v2/seriesid/` API with pagination. Full history, no date filter. |
+| `Silver_Clean` | Silver | Cast types, join all series, add era labels, conflict flag, rolling calculations (WoW, 4wk avg). |
+| `Gold_Kpis` | Gold | Aggregate KPIs, era averages, export CSVs to Unity Catalog Volume `/Volumes/petroleum_gold/exports/csv_exports/`. |
 
 ---
 
