@@ -83,6 +83,8 @@ runs 1.5 hours later to ensure the API has the latest data available.
 **To run manually:** Go to Jobs & Pipelines in the Databricks sidebar → select the job →
 click Run Now.
 
+**YAML Config: ** Added in the notebooks section as SchedulerJobYAMLConfig.yml
+
 ---
 
 ## EIA API series used
@@ -135,7 +137,7 @@ Each row in the Silver and Gold tables is labelled with its historical context:
 
 ## Dashboard
 
-**Live Tableau Public dashboard:** [ADD YOUR TABLEAU PUBLIC LINK HERE]
+**Live Tableau Public dashboard:**
 
 The dashboard covers:
 - 50-year WTI price timeline with era shading and conflict reference band
@@ -154,7 +156,7 @@ The dashboard covers:
 
 ### Setup
 1. Clone this repo into Databricks Repos (Settings → Linked Accounts → add GitHub token → Repos → Add Repo)
-2. Create a cluster (Runtime 15.4 LTS or higher)
+2. Create a cluster (Runtime 15.4 LTS or higher) OR use the default free cluster provided in Databricks free edition like I have used.
 3. Open `Bronze_Ingest` and replace `YOUR_EIA_API_KEY` with your actual key
 
 ### Run order
@@ -203,7 +205,8 @@ petroleum-analytics-portfolio/
 ├── notebooks/
 │   ├── Bronze_Ingest.py    # EIA API → Bronze Delta tables
 │   ├── Silver_Clean.py     # Clean, join, era labels → Silver Delta table
-│   └── Gold_KPIs.py        # KPI aggregation → Gold tables + Volume CSV export
+│   ├── Gold_KPIs.py        # KPI aggregation → Gold tables + Volume CSV export
+|   └── SchedulerJobYAMLConfig.yml # YAML file having config details of the job created using Databricks Job UI. The code is                                        exported using databricks functionality
 └── README.md
 ```
 
