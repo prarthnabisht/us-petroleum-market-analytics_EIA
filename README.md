@@ -155,16 +155,16 @@ The dashboard covers:
 ### Setup
 1. Clone this repo into Databricks Repos (Settings → Linked Accounts → add GitHub token → Repos → Add Repo)
 2. Create a cluster (Runtime 15.4 LTS or higher)
-3. Open `01_bronze_ingest` and replace `YOUR_EIA_API_KEY` with your actual key
+3. Open `Bronze_Ingest` and replace `YOUR_EIA_API_KEY` with your actual key
 
 ### Run order
 ```
-01_bronze_ingest  →  02_silver_clean  →  03_gold_kpis
+Bronze_Ingest  →  Silver_Clean  →  Gold_KPIs
 ```
 Each notebook validates its output at the end — check the printed summary before running the next step.
 
 ### Download CSVs for Tableau
-After `03_gold_kpis` runs:
+After `Gold_KPIs` runs:
 1. Go to **Catalog** in the Databricks sidebar
 2. Navigate to `petroleum_gold` → `exports` → `csv_exports`
 3. Click **Browse files** → open the export folder
@@ -201,12 +201,13 @@ with an `offset` loop to ensure all rows are captured regardless of history leng
 ```
 petroleum-analytics-portfolio/
 ├── notebooks/
-│   ├── 01_bronze_ingest.py    # EIA API → Bronze Delta tables
-│   ├── 02_silver_clean.py     # Clean, join, era labels → Silver Delta table
-│   └── 03_gold_kpis.py        # KPI aggregation → Gold tables + Volume CSV export
+│   ├── Bronze_Ingest.py    # EIA API → Bronze Delta tables
+│   ├── Silver_Clean.py     # Clean, join, era labels → Silver Delta table
+│   └── Gold_KPIs.py        # KPI aggregation → Gold tables + Volume CSV export
 └── README.md
 ```
 
 ---
 
 *Built by Prarthna Bisht | Houston, TX | [linkedin.com/in/prarthna-bisht](https://www.linkedin.com/in/prarthna-bisht/)*
+<img width="468" height="644" alt="image" src="https://github.com/user-attachments/assets/56c4b53a-1c3d-4282-aa39-8cabfb724069" />
