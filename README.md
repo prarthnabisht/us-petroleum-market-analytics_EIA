@@ -76,9 +76,9 @@ The three notebooks are orchestrated as a single Databricks Job with task depend
 bronze_ingest  ──►  silver_clean  ──►  gold_kpis
 ```
 
-**Schedule:** Every Wednesday at 11:30 AM Central Time (CRON: `30 11 * * 3`)
+**Schedule:** Every Wednesday at 11:00 AM Central Time
 EIA publishes new weekly petroleum data every Wednesday around 9:30 AM Central — the job
-runs 2 hours later to ensure the API has the latest data available.
+runs 1.5 hours later to ensure the API has the latest data available.
 
 **To run manually:** Go to Jobs & Pipelines in the Databricks sidebar → select the job →
 click Run Now.
@@ -210,4 +210,3 @@ petroleum-analytics-portfolio/
 ---
 
 *Built by Prarthna Bisht | Houston, TX | [linkedin.com/in/prarthna-bisht](https://www.linkedin.com/in/prarthna-bisht/)*
-<img width="468" height="644" alt="image" src="https://github.com/user-attachments/assets/56c4b53a-1c3d-4282-aa39-8cabfb724069" />
