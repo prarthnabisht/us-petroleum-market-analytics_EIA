@@ -1,0 +1,28 @@
+resources:
+  jobs:
+    New_Job_Apr_03_2026_03_46_PM:
+      name: New Job Apr 03, 2026, 03:46 PM
+      schedule:
+        quartz_cron_expression: 0 0 11 ? * Wed
+        timezone_id: US/Central
+        pause_status: UNPAUSED
+      tasks:
+        - task_key: Run_Bronze_Layer
+          notebook_task:
+            notebook_path: /your_root_path/us-petroleum-energy-analytics-2026_JFM/notebooks/bronze/Bronze_Ingest
+            source: WORKSPACE
+        - task_key: Run_Silver_Layer
+          depends_on:
+            - task_key: Run_Bronze_Layer
+          notebook_task:
+            notebook_path: /your_root_path/us-petroleum-energy-analytics-2026_JFM/notebooks/silver/Silver_Clean
+            source: WORKSPACE
+        - task_key: Run_Gold_Layer
+          depends_on:
+            - task_key: Run_Silver_Layer
+          notebook_task:
+            notebook_path: /your_root_path/us-petroleum-energy-analytics-2026_JFM/notebooks/gold/Gold_KPIs
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
